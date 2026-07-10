@@ -6,7 +6,7 @@ if (menuBtn && nav) {
 
 const whatsappStyles = document.createElement('link');
 whatsappStyles.rel = 'stylesheet';
-whatsappStyles.href = 'whatsapp.css?v=17';
+whatsappStyles.href = 'whatsapp.css?v=18';
 document.head.appendChild(whatsappStyles);
 
 const waUrl = 'https://wa.me/971585992893?text=Hello%20SAB%20Advisory%20Partners%2C%20I%20would%20like%20to%20submit%20an%20enquiry.';
@@ -18,9 +18,7 @@ if (!whatsappWidget) {
   whatsappWidget.target = '_blank';
   whatsappWidget.rel = 'noopener';
   whatsappWidget.setAttribute('aria-label', 'WhatsApp SAB Advisory Partners');
-  whatsappWidget.innerHTML = '<span class="wa-icon" aria-hidden="true"></span><span class="wa-label">WhatsApp</span>';
   document.body.appendChild(whatsappWidget);
-} else {
-  whatsappWidget.href = waUrl;
-  whatsappWidget.innerHTML = '<span class="wa-icon" aria-hidden="true"></span><span class="wa-label">WhatsApp</span>';
 }
+whatsappWidget.href = waUrl;
+whatsappWidget.innerHTML = '<span class="wa-icon" aria-hidden="true"></span><span class="wa-label">WhatsApp</span>';
