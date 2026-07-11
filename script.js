@@ -6,7 +6,7 @@ if (menuBtn && nav) {
 
 const whatsappStyles = document.createElement('link');
 whatsappStyles.rel = 'stylesheet';
-whatsappStyles.href = 'whatsapp.css?v=18';
+whatsappStyles.href = 'whatsapp.css?v=21';
 document.head.appendChild(whatsappStyles);
 
 const waUrl = 'https://wa.me/971585992893?text=Hello%20SAB%20Advisory%20Partners%2C%20I%20would%20like%20to%20submit%20an%20enquiry.';
