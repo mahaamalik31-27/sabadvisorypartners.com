@@ -22,3 +22,33 @@ if (!whatsappWidget) {
 }
 whatsappWidget.href = waUrl;
 whatsappWidget.innerHTML = '<span class="wa-icon" aria-hidden="true"></span><span class="wa-label">WhatsApp</span>';
+
+const enquiryForm = document.getElementById('enquiryForm');
+if (enquiryForm) {
+  enquiryForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const data = new FormData(enquiryForm);
+    const name = (data.get('name') || '').toString().trim();
+    const email = (data.get('email') || '').toString().trim();
+    const phone = (data.get('phone') || '').toString().trim();
+    const enquiryType = (data.get('enquiry_type') || '').toString().trim();
+    const message = (data.get('message') || '').toString().trim();
+    const subject = 'New SAB Advisory Partners Website Enquiry';
+    const body = [
+      'New enquiry from SAB Advisory Partners website',
+      '',
+      'Name: ' + name,
+      'Email: ' + email,
+      'Phone / WhatsApp: ' + phone,
+      'Enquiry Type: ' + enquiryType,
+      '',
+      'Message:',
+      message
+    ].join('\n');
+    window.location.href = 'mailto:info@sabadvisorypartners.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    const note = enquiryForm.querySelector('.form-note');
+    if (note) {
+      note.textContent = 'Your email app should open with the enquiry ready to send. You can also use the WhatsApp button for a direct message.';
+    }
+  });
+}
