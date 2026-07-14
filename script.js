@@ -9,7 +9,8 @@ whatsappStyles.rel = 'stylesheet';
 whatsappStyles.href = 'whatsapp.css?v=21';
 document.head.appendChild(whatsappStyles);
 
-const waUrl = 'https://wa.me/971585992893?text=Hello%20SAB%20Advisory%20Partners%2C%20I%20would%20like%20to%20submit%20an%20enquiry.';
+const waBaseUrl = 'https://wa.me/971585992893';
+const waUrl = waBaseUrl + '?text=' + encodeURIComponent('Hello SAB Advisory Partners, I would like to submit an enquiry.');
 let whatsappWidget = document.querySelector('.whatsapp-widget');
 if (!whatsappWidget) {
   whatsappWidget = document.createElement('a');
@@ -33,8 +34,7 @@ if (enquiryForm) {
     const phone = (data.get('phone') || '').toString().trim();
     const enquiryType = (data.get('enquiry_type') || '').toString().trim();
     const message = (data.get('message') || '').toString().trim();
-    const subject = 'New SAB Advisory Partners Website Enquiry';
-    const body = [
+    const whatsappMessage = [
       'New enquiry from SAB Advisory Partners website',
       '',
       'Name: ' + name,
@@ -45,10 +45,10 @@ if (enquiryForm) {
       'Message:',
       message
     ].join('\n');
-    window.location.href = 'mailto:info@sabadvisorypartners.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    window.open(waBaseUrl + '?text=' + encodeURIComponent(whatsappMessage), '_blank');
     const note = enquiryForm.querySelector('.form-note');
     if (note) {
-      note.textContent = 'Your email app should open with the enquiry ready to send. You can also use the WhatsApp button for a direct message.';
+      note.textContent = 'WhatsApp should open with the enquiry ready to send.';
     }
   });
 }
