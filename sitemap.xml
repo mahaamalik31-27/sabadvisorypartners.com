@@ -1,7 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
   <url><loc>https://sabadvisorypartners.com/</loc><priority>1.0</priority></url>
   <url><loc>https://sabadvisorypartners.com/services.html</loc><priority>0.9</priority></url>
+  <url><loc>https://sabadvisorypartners.com/ma-advisory-uae.html</loc><priority>0.9</priority></url>
+  <url><loc>https://sabadvisorypartners.com/ma-advisory-dubai.html</loc><priority>0.9</priority></url>
+  <url><loc>https://sabadvisorypartners.com/sell-side-advisory-uae.html</loc><priority>0.85</priority></url>
+  <url><loc>https://sabadvisorypartners.com/buy-side-advisory-uae.html</loc><priority>0.85</priority></url>
+  <url><loc>https://sabadvisorypartners.com/business-valuation-dubai.html</loc><priority>0.85</priority></url>
+  <url><loc>https://sabadvisorypartners.com/financial-due-diligence-uae.html</loc><priority>0.85</priority></url>
+  <url><loc>https://sabadvisorypartners.com/transaction-advisory-uae.html</loc><priority>0.85</priority></url>
+  <url><loc>https://sabadvisorypartners.com/exit-planning-uae.html</loc><priority>0.85</priority></url>
   <url><loc>https://sabadvisorypartners.com/why-sab.html</loc><priority>0.8</priority></url>
   <url><loc>https://sabadvisorypartners.com/partnerships.html</loc><priority>0.7</priority></url>
   <url><loc>https://sabadvisorypartners.com/blog.html</loc><priority>0.8</priority></url>
