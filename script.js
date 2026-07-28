@@ -9,6 +9,11 @@ whatsappStyles.rel = 'stylesheet';
 whatsappStyles.href = 'whatsapp.css?v=21';
 document.head.appendChild(whatsappStyles);
 
+const articleStyles = document.createElement('link');
+articleStyles.rel = 'stylesheet';
+articleStyles.href = 'article.css?v=27';
+document.head.appendChild(articleStyles);
+
 const waBaseUrl = 'https://wa.me/971585992893';
 const waUrl = waBaseUrl + '?text=' + encodeURIComponent('Hello SAB Advisory Partners, I would like to submit an enquiry.');
 let whatsappWidget = document.querySelector('.whatsapp-widget');
